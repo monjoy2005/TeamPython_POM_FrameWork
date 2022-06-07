@@ -3,7 +3,7 @@
 
 
 To clone this project
-# git clone https://github.com/monjoy2005/TeamPython_SeleniumProject.git
+# git clone https://github.com/monjoy2005/TeamPython_POM_FrameWork.git
 
 1. To create and switch a new branch
 # git checkout -b "make a name"
