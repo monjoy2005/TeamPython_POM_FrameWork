@@ -1,4 +1,4 @@
-package pages;
+package pages.mritunjoy;
 
 import base.CommonAPI;
 import org.openqa.selenium.WebDriver;
@@ -19,6 +19,17 @@ public class HomePage extends CommonAPI {
 
     @FindBy(css = "#ac-gn-link-search") //NEW
     private WebElement searchBtnBeforeSearch;
+
+    @FindBy(xpath = "//a[@class='ac-gn-link ac-gn-link-mac']")//NEW
+    private WebElement macBtn;
+
+    public void clickMacBtn(){ //NEW
+        click(macBtn);
+    }
+
+    public String getLandedPageTitle(){ //NEW
+        return getPageTitle();
+    }
 
     @FindBy(css = "#searchDropdownBox")
     private WebElement menuDropdown;

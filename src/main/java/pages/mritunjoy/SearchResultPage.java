@@ -1,4 +1,4 @@
-package pages;
+package pages.mritunjoy;
 
 import base.CommonAPI;
 import org.openqa.selenium.WebDriver;
@@ -13,6 +13,11 @@ public class SearchResultPage extends CommonAPI {
     public String getSearchPageTitle(){
         return getPageTitle();
     }
+
+    public String getSearchPageUrl(){
+        return getSearchPageUrl();
+    }
+
 
 //    public String getSearchPageUrl(){
 //        return getSearchPageUrl();

@@ -3,25 +3,48 @@ package Application.apple;
 import base.CommonAPI;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.HomePage;
-import pages.SearchResultPage;
+import pages.mritunjoy.HomePage;
+import pages.mritunjoy.SearchResultPage;
 
-public class SearchBar extends CommonAPI {
+public class SearchBarTest extends CommonAPI {
 
     @Test
-    public void searchJavaBook(){
+    public void searchAirPods(){
         HomePage homePage = new HomePage(getDriver());
         SearchResultPage searchResultPage = new SearchResultPage(getDriver());
-        homePage.searchElement("java book");
+        homePage.clickSearchBtnBeforeSearch();
+        homePage.searchElement("AirPods");
         homePage.clickSearchBtn();
-        String expectedJavaPageTitle = "Amazon.com : java book";
-        Assert.assertEquals(expectedJavaPageTitle, searchResultPage.getSearchPageTitle());
+        String expectedPageUrl = "https://www.apple.com/airpods/";
+        //Assert.assertEquals(expectedPageUrl, searchResultPage.getSearchPageUrl());
     }
 
     @Test
-    public void StorePage(){
-        click("//li[@class='ac-gn-item ac-gn-item-menu ac-gn-store']");
-        String expectedMassage = "The best way to buy the products you love.";
-        Assert.assertEquals(expectedMassage,getElementText("//div[text()='The best way to buy the products you love.']"));
+    public void searchGiftCards(){
+        HomePage homePage = new HomePage(getDriver());
+        SearchResultPage searchResultPage = new SearchResultPage(getDriver());
+        homePage.clickSearchBtnBeforeSearch();
+        homePage.searchElement("Gift Cards");
+        homePage.clickSearchBtn();
+        String expectedPageUrl = "https://www.apple.com/shop/gift-cards";
+        Assert.assertEquals(expectedPageUrl, searchResultPage.getSearchPageUrl());
     }
+
+    @Test
+    public void searchAirTag(){
+        HomePage homePage = new HomePage(getDriver());
+        SearchResultPage searchResultPage = new SearchResultPage(getDriver());
+        homePage.clickSearchBtnBeforeSearch();
+        homePage.searchElement("AirTag");
+        homePage.clickSearchBtn();
+        String expectedPageTitle = "AirTag - Apple";
+        //Assert.assertEquals(expectedPageTitle, searchResultPage.getSearchPageTitle());
+    }
+
+//    //@Test
+//    public void StorePage(){
+//        click("//li[@class='ac-gn-item ac-gn-item-menu ac-gn-store']");
+//        String expectedMassage = "The best way to buy the products you love.";
+//        Assert.assertEquals(expectedMassage,getElementText("//div[text()='The best way to buy the products you love.']"));
+//    }
 }
