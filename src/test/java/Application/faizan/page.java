@@ -1,4 +1,4 @@
 package Application.faizan;
 
-public class Page {
+public class page {
 }
