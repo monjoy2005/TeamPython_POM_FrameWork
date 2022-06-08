@@ -51,7 +51,7 @@ public class SearchTest extends CommonAPI {
         SearchResultPage searchResultPage = new SearchResultPage(getDriver());
         homePage.searchElement("kvm console");
         homePage.clickSearchBtn();
-       searchResultPage.checkKvmTextIsPresent();
+        searchResultPage.checkKvmTextIsPresent();
     }
 
     @Test
@@ -60,8 +60,8 @@ public class SearchTest extends CommonAPI {
         SearchResultPage searchResultPage = new SearchResultPage(getDriver());
         homePage.searchElement("Server");
         homePage.clickSearchBtn();
-        String expectedLaptopPageUrl="https://www.dell.com/en-us/work/search/Server";
-        Assert.assertEquals(expectedLaptopPageUrl,getPageUrl());
+        String expectedMassage="server";
+        Assert.assertEquals(expectedMassage,getElementText(searchResultPage.getServerPageInfo()));
     }
 
 

@@ -20,13 +20,8 @@ public class SearchResultPage extends CommonAPI {
     @FindBy(xpath = "//h2[@class='pageinfo']/span[3]")
     private WebElement kvmText;
 
-    public String getSearchPageTitle(){
-        return getPageTitle();
-    }
-
-    public String getSearchPageUrl(){
-        return getPageUrl();
-    }
+    @FindBy(xpath = "//h2[@class='pageinfo']/span[3]")
+    private WebElement serverPageInfo;
 
     public boolean checkLogoIsPresent(){
         return isPresent(amdLogo);
@@ -38,5 +33,7 @@ public class SearchResultPage extends CommonAPI {
         return isPresent(kvmText);
     }
 
-
+    public WebElement getServerPageInfo() {
+        return serverPageInfo;
+    }
 }
