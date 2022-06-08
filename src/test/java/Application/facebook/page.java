@@ -1,4 +1,4 @@
 package Application.facebook;
 
-public class Page {
+public class page {
 }

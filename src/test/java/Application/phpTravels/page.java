@@ -1,4 +1,4 @@
 package Application.phpTravels;
 
-public class Page {
+public class page {
 }
