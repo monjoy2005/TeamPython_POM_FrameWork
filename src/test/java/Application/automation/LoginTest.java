@@ -59,4 +59,7 @@ public class LoginTest extends CommonAPI {
         Assert.assertEquals(getElementText(loginPage.alreadyRegistered),expectedMessage);
     }
 
+
+    //Hi guys
+
 }
