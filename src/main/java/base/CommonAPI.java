@@ -79,7 +79,7 @@ public class CommonAPI {
             takeScreenshot(result.getName());
         }
 //        }
-        driver.quit();
+       // driver.quit();
     }
     @AfterSuite
     public void generateReport() {
