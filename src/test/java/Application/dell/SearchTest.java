@@ -3,8 +3,8 @@ package Application.dell;
 import base.CommonAPI;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.mritunjoy.HomePage;
-import pages.mritunjoy.SearchResultPage;
+import pages.dell_Pages.HomePage;
+import pages.dell_Pages.SearchResultPage;
 
 public class SearchTest extends CommonAPI {
 
