@@ -26,9 +26,8 @@ public class SearchResultPage extends CommonAPI {
     public boolean checkLogoIsPresent(){
         return isPresent(amdLogo);
     }
-    public boolean checkMonitorsTextIsPresent(){
-        return isPresent(monitorsText);
-    }
+    public boolean checkMonitorsTextIsPresent(){return isPresent(monitorsText);}
+    //Need to ask is this is the right way
     public boolean checkKvmTextIsPresent(){
         return isPresent(kvmText);
     }

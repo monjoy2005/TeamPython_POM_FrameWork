@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="amazon smoke amazon">
+<suite name="Dell Smoke Test">
     <parameter name="useCloudEnv" value="false"></parameter>
     <parameter name="envName" value="browserstack"></parameter>
     <parameter name="os" value="windows"></parameter>
@@ -16,11 +16,18 @@
         </classes>
     </test>
 
-    <!--    <test name="Mac Page Test">-->
-    <!--        <classes>-->
-    <!--            <class name="Application.apple.Page"></class>-->
-    <!--        </classes>-->
-    <!--    </test>-->
+    <test name="SignIn Test">
+         <classes>
+            <class name="Application.dell.SignInTest"></class>
+         </classes>
+    </test>
+
+    <test name="DropDown Test">
+        <classes>
+            <class name="Application.dell.DropDownTest"></class>
+        </classes>
+    </test>
+
 
 
 

@@ -5,14 +5,34 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
 
 public class HomePage extends CommonAPI{
 
 
     @FindBy(xpath = "//div[@class='mh-search']/input")
-    private WebElement searchField;
+    public WebElement searchField;
+
     @FindBy(xpath = "//button[@class='mh-search-btn mh-search-submit']")
-    private WebElement searchBtn;
+    public WebElement searchBtn;
+
+    @FindBy(xpath = "//div[@class='mh-myaccount']")
+    public WebElement signInHoverOver;
+
+    @FindBy(xpath = "//*[text()=' Create an account ']")
+    public WebElement createAccountBtn;
+
+    @FindBy(xpath = "//div[@class='mh-myaccount-ctas']/a[3]")
+    public WebElement financialServiceBtn;
+
+    @FindBy(xpath = "//span[contains(text(),'Products')]")
+    public WebElement hoverOverProducts;
+
+    @FindBy(xpath = "//a[contains(text(),'Gaming')]")
+    public WebElement hoverOverProductsGaming;
+
+    @FindBy(xpath = "//a[contains(text(),'Dell Gaming')]")
+    public WebElement hoverOverProductsGamingDellGaming;
 
 
 
@@ -21,10 +41,10 @@ public class HomePage extends CommonAPI{
 
 
 
-    public HomePage(WebDriver driver){
-        PageFactory.initElements(driver, this);
-    }
-// reusable methods
+
+
+    public HomePage(WebDriver driver){PageFactory.initElements(driver, this);}
+// reusable steps
 
     public void searchElement(String item){
         type(searchField,item);
@@ -38,8 +58,12 @@ public class HomePage extends CommonAPI{
     public void clearSearchField(){
         clear(searchField);
     }
-    public String pageTitle(){return getPageTitle();}
-    public String pageUrl(){return getPageUrl();}
+
+    public void hoverOverOnSignInBtn(){hoverOver(getDriver(),signInHoverOver);}
+
+    //public void clickCreateAccountBtn(){click(createAccountBtn);}
+   // public String pageTitle(){return getPageTitle();}
+   // public String pageUrl(){return getPageUrl();}
 
 
 
