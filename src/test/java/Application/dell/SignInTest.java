@@ -2,9 +2,9 @@ package Application.dell;
 
 import base.CommonAPI;
 import org.testng.annotations.Test;
-import pages.mritunjoy.CreateAccountPage;
-import pages.mritunjoy.DellFinancialSesvicesPage;
-import pages.mritunjoy.HomePage;
+import pages.dell_Pages.CreateAccountPage;
+import pages.dell_Pages.DellFinancialSesvicesPage;
+import pages.dell_Pages.HomePage;
 
 public class SignInTest extends CommonAPI {
     @Test
