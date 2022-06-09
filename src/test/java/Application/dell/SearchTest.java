@@ -7,6 +7,7 @@ import pages.mritunjoy.HomePage;
 import pages.mritunjoy.SearchResultPage;
 
 public class SearchTest extends CommonAPI {
+
     @Test
     public void searchLaptop(){
     HomePage homePage = new HomePage(getDriver());
@@ -22,7 +23,8 @@ public class SearchTest extends CommonAPI {
     public void searchAmdLaptop(){
         HomePage homePage = new HomePage(getDriver());
         SearchResultPage searchResultPage = new SearchResultPage(getDriver());
-        homePage.searchElement("AMD Laptop");
+        //homePage.searchElement("AMD Laptop");                                 //  with reusable steps
+        type(homePage.searchField,"AMD Laptop");                            //  without reusable steps
         homePage.clickSearchBtn();
         searchResultPage.checkLogoIsPresent();
     }
@@ -64,5 +66,12 @@ public class SearchTest extends CommonAPI {
         Assert.assertEquals(expectedMassage,getElementText(searchResultPage.getServerPageInfo()));
     }
 
+    @Test
+    public void emptySearch(){
+        HomePage homepage=new HomePage(getDriver());
+        typeAndEnter(homepage.searchField,"");
+        String expectedTitle = "Computers, Monitors & Technology Solutions | Dell USA";
+        Assert.assertEquals(expectedTitle,getPageTitle());
+    }
 
 }
