@@ -9,24 +9,40 @@ import org.openqa.selenium.support.PageFactory;
 public class CredentialsPage extends CommonAPI {
     //Address Information
     @FindBy(css = "#cbiID0ECARBCFBFBOA")
-    WebElement Companyname;
+    private WebElement Companyname;
 
     @FindBy(css = "#cbiID0ECAPBCFBFBOA")
-    WebElement Firstname;
+    private WebElement Firstname;
 
     @FindBy(css = "#cbiID0ECAOBCFBFBOA")
-    WebElement Lastname;
+    private WebElement Lastname;
 
     @FindBy(css = "#cbiID0ECALBCFBFBOA")
-    WebElement Streetaddress;
+    private WebElement Streetaddress;
 
     @FindBy(css = "#cbiID0ECAJBCFBFBOA")
-    WebElement City;
+    private WebElement City;
 
     @FindBy(css = "#cbiID0ECAHBCFBFBOA")
-    WebElement Zipcode;
+    private WebElement Zipcode;
 
+    @FindBy(css = "#cbiID0EDAEBCFBFBOA")
+    private WebElement phoneNUMBER;
 
+    @FindBy(css = "#cbiID0ECAABBBCFBFBOA")
+    private WebElement Email;
+    //Payment options
+    @FindBy(css = "#cbiID0ECABAAAWDABBFBOA")
+    private WebElement cardHOLDERNAME;
+
+    @FindBy(css = "#cbiID0ECABCAAWDABBFBOA")
+    private WebElement Cardnumber;
+
+    @FindBy(css = "#cbiID0ECABBAAWDABBFBOA")
+    private WebElement CVVcode;
+
+    @FindBy(css = "#cleverSubmitPurchase > span > span > span > span > span > input")
+    private WebElement BuyNowbtn;
     public CredentialsPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
@@ -36,8 +52,8 @@ public class CredentialsPage extends CommonAPI {
         type(Companyname,"Spacex");
      }
      public void clickandtypeonFirstname(){
-        click(Companyname);
-        type(Companyname,"Elon");
+        click(Firstname);
+        type(Firstname,"Elon");
      }
     public void clickandtypeonLastname(){
         click(Lastname);
@@ -55,6 +71,37 @@ public class CredentialsPage extends CommonAPI {
         click(Zipcode);
         type(Zipcode,"11368");
     }
+    public void clickANDTYPEONPHONENUMBER(){
+        click(phoneNUMBER);
+        type(phoneNUMBER,"929-396-5922");
+    }
+    public void clickANDTYPEONEMAIL(){
+        click(Email);
+        type(Email,"ElonMusk@gmail.com");
+    }
+    public void clickANDTYPEONCARDHOLDERNAME(){
+        click(cardHOLDERNAME);
+        type(cardHOLDERNAME,"Elon Musk");
+    }
+    public void clickANDTYPEONCARDNUMBER(){
+        click(Cardnumber);
+        type(Cardnumber,"123-456-7891");
+    }
+    public void clickANDTYPEONCVVCODE(){
+        click(CVVcode);
+        type(CVVcode,"826");
+    }
+    public void clickBUYNOWBTN(){
+        click(BuyNowbtn);
+    }
+
+
+
+
+
+
+
+
 
 
 

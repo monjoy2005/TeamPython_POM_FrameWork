@@ -8,39 +8,39 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ShoppingCartPage extends CommonAPI {
     @FindBy(xpath = "//*[@id=\"cart\"]/i")
-    WebElement Shoppingcartbtn;
+    private WebElement Shoppingcartbtn;
     @FindBy(css = "#form > div.sb-legacy > div.store-content > div.container-wrap.home-tail > div > div > div:nth-child(1) > a > div")
-    WebElement ShopAQTimeprobutton;
+    private WebElement ShopAQTimeprobutton;
 
     @FindBy(css = "#Buy > div > div.col-md-9 > div:nth-child(2) > div.d-flex.justify-content-between > div > button > div > div > div")
-    WebElement Selectoptionbtn;
+    private WebElement Selectoptionbtn;
 
     @FindBy(css = "#Buy > div > div.col-md-9 > div:nth-child(2) > div.d-flex.justify-content-between > div > div > div > ul > li:nth-child(2) > a > span > strong")
-    WebElement AQtimefirstoption;
+    private WebElement AQtimefirstoption;
 
     @FindBy(xpath = "//*[@id=\"subtotal-link-Buy\"]")
-    WebElement AddtoCartbtn;
+    private WebElement AddtoCartbtn;
 
     @FindBy(css = "#form > div.sb-legacy > div.store-content > div:nth-child(2) > div > div > div.row.cart__row.row-39960 > div:nth-child(2) > div > span.input-group-btn-vertical > button.btn.btn-default.bootstrap-touchspin-up")
-    WebElement Plusbtn;
+    private WebElement Plusbtn;
 
     @FindBy(css = "#form > div.sb-legacy > div.store-content > div:nth-child(2) > div > div > div.row.cart__row.row-39960 > div:nth-child(2) > div > span.input-group-btn-vertical > button.btn.btn-default.bootstrap-touchspin-down")
-    WebElement Minusbtn;
+    private WebElement Minusbtn;
 
     @FindBy(css = "#form > div.sb-legacy > div.store-content > div:nth-child(2) > div > div > div.row.cart__row.row-39960 > div.col-md-8.col-sm-12.col-xs-12 > div.cart__product-remove > input[type=checkbox]")
-    WebElement Checkbtn;
+    private WebElement Checkbtn;
 
     @FindBy(css = "#form > div.sb-legacy > div.store-content > div:nth-child(2) > div > div > div.row.cart__actions > div:nth-child(1) > a")
-    WebElement Removebtn;
+    private WebElement Removebtn;
 
     @FindBy(css = "#form > div.sb-legacy > div.store-content > div:nth-child(2) > div > div > div.row.cart__actions > div:nth-child(2) > a.cart__apply_code.btn")
-    WebElement Repcodebtn;
+    private WebElement Repcodebtn;
 
     @FindBy(css = "#txtRepCode")
-    WebElement Repcodespacebtn;
+    private WebElement Repcodespacebtn;
 
     @FindBy(xpath = "//*[@id=\"btnApplyCode\"]")
-    WebElement applybtn;
+    private WebElement applybtn;
 
     @FindBy(css = "#form > div.sb-legacy > div.store-content > div:nth-child(2) > div > div > div.row.cart__actions > div:nth-child(2) > a.cart__checkout-button.btn.btn-brand")
     private WebElement Checkoutbtn;
