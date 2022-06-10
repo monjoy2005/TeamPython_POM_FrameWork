@@ -3,8 +3,8 @@ package Application.apple;
 import base.CommonAPI;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.mritunjoy.HomePage;
-import pages.mritunjoy.SearchResultPage;
+import pages.methi.mritunjoy.HomePage;
+import pages.methi.mritunjoy.SearchResultPage;
 
 public class SearchBarTest extends CommonAPI {
 

@@ -3,8 +3,7 @@ package Application.apple;
 import base.CommonAPI;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.mritunjoy.HomePage;
-import pages.mritunjoy.SearchResultPage;
+import pages.methi.mritunjoy.HomePage;
 
 public class Page extends CommonAPI {
 
