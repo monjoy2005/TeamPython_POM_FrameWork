@@ -23,7 +23,14 @@ public class SearchResultPage extends CommonAPI {
     @FindBy(xpath = "//h2[@class='pageinfo']/span[3]")
     private WebElement serverPageInfo;
 
-    public boolean checkLogoIsPresent(){
+    @FindBy(xpath = "//input[@name='44398']")
+    private WebElement lessThan100;
+    @FindBy(xpath = "//div[@class='anavmfe__facet__item']")
+    private WebElement lessThan100Massage;
+
+
+    public boolean checkAmdLogoIsPresent(){
+
         return isPresent(amdLogo);
     }
     public boolean checkMonitorsTextIsPresent(){return isPresent(monitorsText);}
@@ -32,7 +39,10 @@ public class SearchResultPage extends CommonAPI {
         return isPresent(kvmText);
     }
 
-    public WebElement getServerPageInfo() {
-        return serverPageInfo;
+    public String getServerPageInfo() {
+        return getElementText(serverPageInfo);
     }
+
+    public void checkLessThan100(){click(lessThan100);}
+    public boolean checkLessThan100MassageIsPresent() {return isPresent(lessThan100Massage);}
 }

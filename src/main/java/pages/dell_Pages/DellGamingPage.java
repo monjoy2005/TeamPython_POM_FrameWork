@@ -14,5 +14,8 @@ public class DellGamingPage extends CommonAPI {
     public WebElement gamingLaptopsBtn;
 
     @FindBy(xpath = "//div[@class='title bottom-offset-0 clear-both']/h1")
-    public WebElement dellGamingPageTitle;
+    private WebElement GamingPageTitle;
+
+
+
 }
