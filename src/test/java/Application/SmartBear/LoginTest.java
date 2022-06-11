@@ -92,8 +92,6 @@ public class LoginTest extends CommonAPI {
         waitFor(3);
         SupportPage.clickANDTYPEONSUBJECTFIELD();
         waitFor(3);
-
-
     }
 
 

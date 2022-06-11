@@ -23,8 +23,8 @@ public class SupportPage extends CommonAPI {
     WebElement CaptureforJIRABTN;
 
     //Provide Information about yourself
-    @FindBy(xpath = "")
-    WebElement youremail;
+    @FindBy(xpath = "(//td/input)[1]")
+    private WebElement youremail;
 
     @FindBy(xpath = "//*[@id=\"webToCasePage:w2cForm:webToCaseZephyr:webToCaseZephyrComponent:step1:webToCaseContainer:edtExtraEmails\"]")
     WebElement ccemails;
@@ -60,7 +60,7 @@ public class SupportPage extends CommonAPI {
         click(CaptureforJIRABTN);
     }
     public void clickANDTYPEONYOUREMAIL(){
-        click(youremail);
+       // click(youremail);
         type(youremail,"jeffbezos@gmail.com");
     }
     public void clickANDTYPEONCCEMAIL(){

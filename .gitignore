@@ -23,6 +23,7 @@ test-output/
 .LSOverride
 target\
 test-output\
+Extent-Report\
 
 # Icon must end with two \r
 Icon
