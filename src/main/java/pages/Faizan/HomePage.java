@@ -17,6 +17,20 @@ public class HomePage extends CommonAPI {
 
     @FindBy(css = "#p_lt_Header > div > div > nav > ul > li.nav-item.dropdown.show > div > div > div > div > div > div:nth-child(2) > div.solutions-see-all.mb-4.mb-lg-0 > a")
     WebElement SeeAllIntegrations;
+
+    @FindBy(css = "#p_lt_Header > div > div > nav > ul > li.nav-item.nav-item-login > a")
+    WebElement Loginbtn;
+
+    @FindBy(css = "#form > div.login-modal > div.container > div > div.row.d-flex.h-100 > div:nth-child(2) > a > span.prod-icon.as.empty")
+    WebElement AlertSiteBtn;
+
+    @FindBy(css = "#form > footer > nav.main-footer > div > div > div.right-side.col-12.col-md-12.col-xl-3 > div.right-side-container > div > div.contact.col-12 > ul > li:nth-child(1) > a")
+    WebElement Contactusbtn;
+
+    @FindBy(css = "#form > section > div > div > div.col-12.col-md-6.col-lg-7.pt-5 > div > div.border.p-4.mb-5 > div > div.col-md-12.mt-3.mb-2 > a")
+    WebElement Supportbtn;
+
+
     public HomePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
@@ -34,6 +48,22 @@ public class HomePage extends CommonAPI {
 
     public void clickONSeeAllIntegrationsbtn(){
         click(SeeAllIntegrations);
+    }
+
+    public void clickONLoginbtn(){
+        click(Loginbtn);
+    }
+
+    public void clickONAlertsite(){
+        click(AlertSiteBtn);
+    }
+
+    public void clickONSUPPORTBTN(){
+        click(Supportbtn);
+    }
+
+    public void clickONCONTACTUS(){
+        click(Contactusbtn);
     }
 
 
