@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Telerik Smoke Test">
+    <parameter name="useCloudEnv" value="false"></parameter>
+    <parameter name="envName" value="browserstack"></parameter>
+    <parameter name="os" value="windows"></parameter>
+    <parameter name="osVersion" value="11"></parameter>
+    <parameter name="browserName" value="chrome"></parameter>
+    <parameter name="browserVersion" value="102"></parameter>
+    <parameter name="url" value="https://www.telerik.com/"></parameter>
+
+<!--    <test name="Login Test">-->
+<!--        <classes>-->
+<!--            <class name="Application.Telerik.TC01TelerikLoginPage"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Avatar Test">-->
+<!--        <classes>-->
+<!--            <class name="Application.Telerik.TC02TelerikAvatarPage"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+    
+<!--        <test name="Edit Profile Test">-->
+<!--            <classes>-->
+<!--                <class name="Application.Telerik.TC03TelerikProfilePage"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
+
+<!--    <test name="Referral Page Test">-->
+<!--        <classes>-->
+<!--            <class name="Application.Telerik.TC04TelerikReferralPage"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+    
+<!--    <test name="Points Page Test">-->
+<!--        <classes>-->
+<!--            <class name="Application.Telerik.TC05TelerikPointsPage"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Kendo UI Test">-->
+<!--        <classes>-->
+<!--            <class name="Application.Telerik.TC06KendoUIPage"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    -->
+<!--    <test name="Kendo UI for JQuery Test">-->
+<!--        <classes>-->
+<!--            <class name="Application.Telerik.TC07KendoUIJQuery"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+    
+<!--        <test name="JQuery Data Grid Test">-->
+<!--            <classes>-->
+<!--                <class name="Application.Telerik.TC08JQueryDataGrid"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
+
+<!--        <test name="JQuery Charts Test">-->
+<!--            <classes>-->
+<!--                <class name="Application.Telerik.TC09JQueryCharts"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
+
+<!--    <test name="JQuery Scheduler Test">-->
+<!--        <classes>-->
+<!--            <class name="Application.Telerik.TC10JQueryScheduler"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Kendo UI Angular Test">-->
+<!--        <classes>-->
+<!--            <class name="Application.Telerik.TC11KendoUIAngularPage"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--        <test name="Angular Data Grid Test">-->
+<!--            <classes>-->
+<!--                <class name="Application.Telerik.TC12AngularDataGridPage"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
+
+<!--        <test name="Angular Charts Test ">-->
+<!--            <classes>-->
+<!--                <class name="Application.Telerik.TC13AngularChartsPage"></class>-->
+<!--            </classes>-->
+<!--        </test>        -->
+        
+<!--        <test name="Angular Scheduler Test">-->
+<!--            <classes>-->
+<!--                <class name="Application.Telerik.TC14AngularSchedulerPage"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
+    
+<!--            <test name="Kendo UI React Page Test">-->
+<!--                <classes>-->
+<!--                    <class name="Application.Telerik.TC15KendoUIReactPage"></class>-->
+<!--                </classes>-->
+<!--            </test>-->
+    
+<!--        <test name="Kendo React Data Grid Page Test">-->
+<!--            <classes>-->
+<!--                <class name="Application.Telerik.TC16ReactDataGridPage"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
+
+<!--    <test name="Kendo React Scheduler Page Test">-->
+<!--        <classes>-->
+<!--            <class name="Application.Telerik.TC17ReactSchedulerPage"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Kendo React Charts Page Test">-->
+<!--        <classes>-->
+<!--            <class name="Application.Telerik.TC18ReactChartsPage"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Kendo UI Vue Page Test">-->
+<!--        <classes>-->
+<!--            <class name="Application.Telerik.TC19KendoUIVuePage"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Kendo Vue Data Grid Test">-->
+<!--        <classes>-->
+<!--            <class name="Application.Telerik.TC20VueDataGridPage"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Kendo Vue Charts Test">-->
+<!--        <classes>-->
+<!--            <class name="Application.Telerik.TC21VueChartsPage"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Kendo Vue Charts Test">-->
+<!--        <classes>-->
+<!--            <class name="Application.Telerik.TC22VueDatePickerPage"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Kendo UI for ASP.NET Ajax Test">-->
+<!--        <classes>-->
+<!--            <class name="Application.Telerik.TC23ASPAjaxPage"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Client Data Source Test">-->
+<!--        <classes>-->
+<!--            <class name="Application.Telerik.TC24ClientDataSourcePage"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Data Pager Test">-->
+<!--        <classes>-->
+<!--            <class name="Application.Telerik.TC25DataPagerPage"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="DataForm Test">-->
+<!--        <classes>-->
+<!--            <class name="Application.Telerik.TC25DataPagerPage"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="DataForm Test">-->
+<!--        <classes>-->
+<!--            <class name="Application.Telerik.TC26DataFormPage"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Filter Test">-->
+<!--        <classes>-->
+<!--            <class name="Application.Telerik.TC27FilterPage"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--        <test name="ListBox Test">-->
+<!--            <classes>-->
+<!--                <class name="Application.Telerik.TC28ListBoxPage"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
+
+<!--    <test name="ListView Test">-->
+<!--        <classes>-->
+<!--            <class name="Application.Telerik.TC29ListViewPage"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+    <test name="ListView Test">
+        <classes>
+            <class name="Application.Telerik.TC30_OData_DataSource"></class>
+        </classes>
+    </test>
+
+</suite>
