@@ -8,10 +8,10 @@ import pages.dell_Pages.SearchResultPage;
 
 public class SearchTest extends CommonAPI {
 
+
     @Test
     public void searchLaptop(){
     HomePage homePage = new HomePage(getDriver());
-    SearchResultPage searchResultPage = new SearchResultPage(getDriver());
     homePage.searchElement("Laptop");
     homePage.clickSearchBtn();
     String expectedLaptopPageUrl="https://www.dell.com/en-us/search/Laptop";
@@ -32,7 +32,7 @@ public class SearchTest extends CommonAPI {
     @Test
     public void searchGamingPc(){
         HomePage homePage = new HomePage(getDriver());
-        SearchResultPage searchResultPage = new SearchResultPage(getDriver());
+        //SearchResultPage searchResultPage = new SearchResultPage(getDriver());
         homePage.searchElement("Gaming Pc");
         homePage.clickSearchBtn();
         String expectedGamingPcPageUrl="https://www.dell.com/en-us/search/Gaming%20Pc";
@@ -55,6 +55,7 @@ public class SearchTest extends CommonAPI {
         homePage.clickSearchBtn();
         searchResultPage.checkKvmTextIsPresent();
     }
+
 
     @Test
     public void searchServer(){
@@ -82,6 +83,24 @@ public class SearchTest extends CommonAPI {
         homePage.clickSearchBtn();
         searchResultPage.checkLessThan100();
         searchResultPage.checkLessThan100MassageIsPresent();
+    }
+
+    @Test
+    public void support(){
+        HomePage homePage = new HomePage(getDriver());
+        SearchResultPage searchResultPage = new SearchResultPage(getDriver());
+        homePage.searchElement("support");
+        homePage.clickSearchBtn();
+        searchResultPage.checkSupportHeaderTextIsPresent();
+    }
+
+    @Test
+    public void keyboard(){
+        HomePage homePage = new HomePage(getDriver());
+        SearchResultPage searchResultPage = new SearchResultPage(getDriver());
+        homePage.searchElement("keyboard");
+        homePage.clickSearchBtn();
+        searchResultPage.checkKeyboardHeaderTextIsPresent();
     }
 
 }

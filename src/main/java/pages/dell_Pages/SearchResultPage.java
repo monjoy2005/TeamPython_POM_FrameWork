@@ -28,11 +28,14 @@ public class SearchResultPage extends CommonAPI {
     @FindBy(xpath = "//div[@class='anavmfe__facet__item']")
     private WebElement lessThan100Massage;
 
+    @FindBy(xpath = "//h2[@class='direct-content__title']")
+    private WebElement supportHeaderText;
 
-    public boolean checkAmdLogoIsPresent(){
+    @FindBy(xpath = "//div[@class='bc-category-label icon-home']/span")
+    private WebElement keyboardHeaderText;
 
-        return isPresent(amdLogo);
-    }
+
+    public boolean checkAmdLogoIsPresent(){return isPresent(amdLogo);}
     public boolean checkMonitorsTextIsPresent(){return isPresent(monitorsText);}
     //Need to ask is this is the right way
     public boolean checkKvmTextIsPresent(){
@@ -45,4 +48,7 @@ public class SearchResultPage extends CommonAPI {
 
     public void checkLessThan100(){click(lessThan100);}
     public boolean checkLessThan100MassageIsPresent() {return isPresent(lessThan100Massage);}
+    public boolean checkSupportHeaderTextIsPresent() {return isPresent(supportHeaderText);}
+
+    public boolean checkKeyboardHeaderTextIsPresent() {return super.isPresent(keyboardHeaderText);}
 }
