@@ -3,8 +3,8 @@ package Application.dell;
 import base.CommonAPI;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.mritunjoy.HomePage;
-import pages.mritunjoy.SearchResultPage;
+import pages.dell_Pages.HomePage;
+import pages.dell_Pages.SearchResultPage;
 
 public class SearchTest extends CommonAPI {
 
@@ -23,10 +23,10 @@ public class SearchTest extends CommonAPI {
     public void searchAmdLaptop(){
         HomePage homePage = new HomePage(getDriver());
         SearchResultPage searchResultPage = new SearchResultPage(getDriver());
-        //homePage.searchElement("AMD Laptop");                                 //  with reusable steps
-        type(homePage.searchField,"AMD Laptop");                            //  without reusable steps
+        homePage.searchElement("AMD Laptop");                                 //  with reusable steps
+        //type(homePage.searchField,"AMD Laptop");                            //  without reusable steps
         homePage.clickSearchBtn();
-        searchResultPage.checkLogoIsPresent();
+        searchResultPage.checkAmdLogoIsPresent();
     }
 
     @Test
@@ -62,16 +62,26 @@ public class SearchTest extends CommonAPI {
         SearchResultPage searchResultPage = new SearchResultPage(getDriver());
         homePage.searchElement("Server");
         homePage.clickSearchBtn();
-        String expectedMassage="server";
-        Assert.assertEquals(expectedMassage,getElementText(searchResultPage.getServerPageInfo()));
+        String expectedMassage= searchResultPage.getServerPageInfo();
+        Assert.assertEquals("server",expectedMassage);
     }
 
     @Test
     public void emptySearch(){
         HomePage homepage=new HomePage(getDriver());
-        typeAndEnter(homepage.searchField,"");
+        homepage.searchElement("");
         String expectedTitle = "Computers, Monitors & Technology Solutions | Dell USA";
         Assert.assertEquals(expectedTitle,getPageTitle());
+    }
+
+    @Test
+    public void backPack(){
+        HomePage homePage = new HomePage(getDriver());
+        SearchResultPage searchResultPage = new SearchResultPage(getDriver());
+        homePage.searchElement("backpack");
+        homePage.clickSearchBtn();
+        searchResultPage.checkLessThan100();
+        searchResultPage.checkLessThan100MassageIsPresent();
     }
 
 }
