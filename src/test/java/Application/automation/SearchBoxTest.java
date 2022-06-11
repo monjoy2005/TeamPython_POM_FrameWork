@@ -9,7 +9,7 @@ import pages.foyez.SearchResultPage;
 
 public class SearchBoxTest extends CommonAPI {
 
-    @Test(enabled = false)
+    @Test
     public void search(){
         HomePage homePage= new HomePage(getDriver());
         LoginPage loginPage= new LoginPage(getDriver());
@@ -25,7 +25,7 @@ public class SearchBoxTest extends CommonAPI {
 
 
     }
-    @Test(enabled = false)
+    @Test
     public void searchWithKeyBoardBtn(){
         HomePage homePage= new HomePage(getDriver());
         LoginPage loginPage= new LoginPage(getDriver());
@@ -39,7 +39,7 @@ public class SearchBoxTest extends CommonAPI {
         Assert.assertEquals(getElementText(searchResultPage.noOfFoundResult),expected);
     }
 
-    @Test(enabled = false)
+    @Test
     public void searchWithoutSearchKeyword(){
         HomePage homePage= new HomePage(getDriver());
         LoginPage loginPage= new LoginPage(getDriver());
