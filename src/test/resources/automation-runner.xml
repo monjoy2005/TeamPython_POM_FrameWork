@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="automation smoke test">
+
+    <parameter name="url" value="http://automationpractice.com/"></parameter>
+    <parameter name="browser" value="chrome"></parameter>
+    <parameter name="os" value="windows"></parameter>
+    <test name="logInTest">
+        <classes>
+        <class name="Application.automation.LoginTest"></class>
+        </classes>
+    </test>
+    <test name="SearchTest">
+        <classes>
+            <class name="Application.automation.SearchBoxTest"></class>
+        </classes>
+    </test>
+    <test name="productViewTest">
+        <classes>
+            <class name="Application.automation.ItemViewTest"></class>
+        </classes>
+    </test>
+    <test name="CartTest">
+        <classes>
+            <class name="Application.automation.AddToCartTest"></class>
+        </classes>
+    </test>
+    <test name="WishTest">
+        <classes>
+            <class name="Application.automation.WishlistTest"></class>
+        </classes>
+    </test>
+    <test name="QuantityUpDownTest">
+        <classes>
+            <class name="Application.automation.QuantityTest"></class>
+        </classes>
+    </test>
+    <test name="DropdownTest">
+        <classes>
+            <class name="Application.automation.DropdownSizeTest"></class>
+        </classes>
+    </test>
+    <test name="ColorChangeTest">
+        <classes>
+            <class name="Application.automation.ColorTest"></class>
+        </classes>
+    </test>
+
+
+
+
+</suite>

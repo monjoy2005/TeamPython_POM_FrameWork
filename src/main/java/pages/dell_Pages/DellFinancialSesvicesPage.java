@@ -1,4 +1,4 @@
-package pages.mritunjoy;
+package pages.dell_Pages;
 
 import base.CommonAPI;
 import org.openqa.selenium.WebDriver;

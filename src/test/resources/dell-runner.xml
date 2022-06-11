@@ -28,6 +28,12 @@
         </classes>
     </test>
 
+    <test name="Footer Option Test">
+        <classes>
+            <class name="Application.dell.FooterOptionsTest"></class>
+        </classes>
+    </test>
+
 
 
 

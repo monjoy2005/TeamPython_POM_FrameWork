@@ -49,6 +49,7 @@ public class CommonAPI {
         ExtentTestManager.startTest(method.getName());
         ExtentTestManager.getTest().assignCategory(className);
     }
+
     protected String getStackTrace(Throwable t) {
         StringWriter sw = new StringWriter();
         PrintWriter pw = new PrintWriter(sw);
@@ -78,9 +79,12 @@ public class CommonAPI {
         if (result.getStatus() == ITestResult.FAILURE) {
             takeScreenshot(result.getName());
         }
-//        }
+
+// }
+     
         driver.quit();
     }
+  
     @AfterSuite
     public void generateReport() {
         extent.close();
