@@ -85,6 +85,32 @@ public class SearchResultPage extends CommonAPI {
     @FindBy(css = "h1[itemprop='name']")
     public WebElement fadedShortTShirtAssertion;
 
+    @FindBy(xpath = "//button/span[text()='Add to cart']")
+    public WebElement AddCart;
+
+    @FindBy(css = "#product_reference")
+    public WebElement modelAssertion;
+
+    @FindBy(xpath = "//span[@title='Continue shopping']/span")
+    public WebElement continueShopping;
+
+    @FindBy(css = "a[title='View my shopping cart']")
+    public WebElement shoppingCart;
+
+
+
+    @FindBy(xpath = "(//p[@class='buttons_bottom_block no-print'])[2]")
+    public WebElement wishlist;
+
+    @FindBy(css = "#product_condition")
+    public WebElement productConditionAssertion;
+
+    @FindBy(xpath = "//span[text()='My wishlists']")
+    public WebElement myWishlist;
+
+    @FindBy(css = "h1[class='page-heading']")
+    public WebElement wishlistAssertion;
+
 
 
 
@@ -104,6 +130,10 @@ public class SearchResultPage extends CommonAPI {
     public void hoverOverFloating(WebDriver driver){
         hoverOver(driver,floatingMenu);
 
+    }
+
+    public void clickToCart(){
+        click(AddCart);
     }
 
 

@@ -63,5 +63,10 @@ public class HomePage extends CommonAPI {
         hoverOver(driver,homepageItem);
     }
 
+    public void clickOnUserName(){
+        click(userName);
+
+    }
+
 
 }

@@ -79,9 +79,12 @@ public class CommonAPI {
         if (result.getStatus() == ITestResult.FAILURE) {
             takeScreenshot(result.getName());
         }
-    //}
+
+// }
+     
         driver.quit();
     }
+  
     @AfterSuite
     public void generateReport() {
         extent.close();

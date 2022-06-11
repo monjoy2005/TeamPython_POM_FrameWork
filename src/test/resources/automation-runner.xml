@@ -25,6 +25,26 @@
             <class name="Application.automation.AddToCartTest"></class>
         </classes>
     </test>
+    <test name="WishTest">
+        <classes>
+            <class name="Application.automation.WishlistTest"></class>
+        </classes>
+    </test>
+    <test name="QuantityUpDownTest">
+        <classes>
+            <class name="Application.automation.QuantityTest"></class>
+        </classes>
+    </test>
+    <test name="DropdownTest">
+        <classes>
+            <class name="Application.automation.DropdownSizeTest"></class>
+        </classes>
+    </test>
+    <test name="ColorChangeTest">
+        <classes>
+            <class name="Application.automation.ColorTest"></class>
+        </classes>
+    </test>
 
 
 
