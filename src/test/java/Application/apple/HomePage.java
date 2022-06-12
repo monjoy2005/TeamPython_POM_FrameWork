@@ -1,4 +1,4 @@
-package pages.faizan;
+package Application.apple;
 
 public class HomePage {
 }
