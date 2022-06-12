@@ -7,7 +7,7 @@ import pages.Faizan.ShoppingCartPage;
 
 
 public class ShoppingCartTest extends CommonAPI {
-    @Test
+    //@Test
     public void Addtocart() {
         ShoppingCartPage shoppingCartPage = new ShoppingCartPage(getDriver());
         shoppingCartPage.Clickonshoppingcartbtn();
@@ -16,7 +16,7 @@ public class ShoppingCartTest extends CommonAPI {
         shoppingCartPage.ClickonAQtimefirstoption();
         shoppingCartPage.ClickonAddtoCartbtn();
     }
-    @Test
+    //@Test
     public void Addquantity() {
         ShoppingCartPage shoppingCartPage = new ShoppingCartPage(getDriver());
         shoppingCartPage.Clickonshoppingcartbtn();
@@ -26,7 +26,7 @@ public class ShoppingCartTest extends CommonAPI {
         shoppingCartPage.ClickonAddtoCartbtn();
         shoppingCartPage.ClickonPlusbtn();
     }
-    @Test
+    //@Test
     public void Deductquantity(){
         ShoppingCartPage shoppingCartPage = new ShoppingCartPage(getDriver());
         shoppingCartPage.Clickonshoppingcartbtn();
@@ -37,7 +37,7 @@ public class ShoppingCartTest extends CommonAPI {
         shoppingCartPage.ClickonPlusbtn();
         shoppingCartPage.ClickonMinusbtn();
     }
-    @Test
+    //@Test
     public void Removeitemfromcart(){
         ShoppingCartPage shoppingCartPage = new ShoppingCartPage(getDriver());
         shoppingCartPage.Clickonshoppingcartbtn();
@@ -48,7 +48,7 @@ public class ShoppingCartTest extends CommonAPI {
         shoppingCartPage.ClickonCheckbtn();
         shoppingCartPage.ClickonRemovebtn();
     }
-    @Test
+    //@Test
     public void Applygiftcode(){
         ShoppingCartPage shoppingCartPage = new ShoppingCartPage(getDriver());
         shoppingCartPage.Clickonshoppingcartbtn();
@@ -60,7 +60,7 @@ public class ShoppingCartTest extends CommonAPI {
         shoppingCartPage.ClickonRepcodespacebtn();
         shoppingCartPage.ClickonApplybtn();
     }
-    @Test
+    //@Test
     public void Proceedtocheckout(){
         ShoppingCartPage shoppingCartPage = new ShoppingCartPage(getDriver());
         shoppingCartPage.Clickonshoppingcartbtn();
@@ -84,12 +84,22 @@ public class ShoppingCartTest extends CommonAPI {
         CredentialsPage.clickANDTYPEONCVVCODE();
         CredentialsPage.clickBUYNOWBTN();
     }
+    @Test
+    public void ChangeQuantitymanually(){
+        ShoppingCartPage shoppingCartPage = new ShoppingCartPage(getDriver());
+        shoppingCartPage.Clickonshoppingcartbtn();
+        shoppingCartPage.clickonShopAQTimeprobutton();
+        shoppingCartPage.ClickonSelectoptionbtn();
+        shoppingCartPage.ClickonAQtimefirstoption();
+        shoppingCartPage.ClickonAddtoCartbtn();
+    }
+
 
 
 
     }
 
-//Test
+
 
 
 

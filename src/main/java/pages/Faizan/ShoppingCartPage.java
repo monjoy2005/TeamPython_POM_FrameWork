@@ -44,6 +44,9 @@ public class ShoppingCartPage extends CommonAPI {
 
     @FindBy(css = "#form > div.sb-legacy > div.store-content > div:nth-child(2) > div > div > div.row.cart__actions > div:nth-child(2) > a.cart__checkout-button.btn.btn-brand")
     private WebElement Checkoutbtn;
+
+    @FindBy(xpath = "//*[@id=\"form\"]/div[5]/div[1]/div[2]/div/div/div[3]/div[2]/div/input")
+    WebElement quantitySPACEBTN;
     public ShoppingCartPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
@@ -88,6 +91,13 @@ public class ShoppingCartPage extends CommonAPI {
     public void ClickonCheckoutbtn(){
         click(Checkoutbtn);
     }
+
+    public void typeANDDELETEONQUANTITYSPACEBTN(){
+        type(quantitySPACEBTN,"1");
+
+    }
+
+
 
 
 
