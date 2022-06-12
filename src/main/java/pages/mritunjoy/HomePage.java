@@ -1,4 +1,4 @@
-package pages.methi.mritunjoy;
+package pages.mritunjoy;
 
 import base.CommonAPI;
 import org.openqa.selenium.WebDriver;

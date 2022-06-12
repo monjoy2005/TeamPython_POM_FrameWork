@@ -1,4 +1,4 @@
-package pages.methi;
+package Application.apple;
 
 public class HomePage {
 }

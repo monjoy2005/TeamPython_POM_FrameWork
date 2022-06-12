@@ -10,11 +10,11 @@
     <parameter name="browserVersion" value="102"></parameter>
     <parameter name="url" value="https://www.apple.com"></parameter>
 
-    <test name="Search Test">
-        <classes>
-            <class name="Application.apple.SearchBarTest"></class>
-        </classes>
-    </test>
+<!--    <test name="Search Test">-->
+<!--        <classes>-->
+<!--            <class name="Application.apple.SearchBarTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
 <!--    <test name="Mac Page Test">-->
 <!--        <classes>-->
