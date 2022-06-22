@@ -8,42 +8,36 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SupportPage extends CommonAPI {
     @FindBy(css = "#searchComponentLite > div > div > div > div > input")
-    WebElement Searchfield;
-
+    private WebElement Searchfield;
     @FindBy(css = "#searchComponent > div > div.app > div.app-input > div > div")
-    WebElement clearbtn;
-
+    private WebElement clearbtn;
     @FindBy(css = "#searchComponent > div > div.app > div.app-input > div > div")
-    WebElement Closebtn;
-
+    private WebElement Closebtn;
     @FindBy(xpath = "//*[@id=\"root\"]/div[4]/div[1]/div/div/div[2]/p/a[1]")
-    WebElement openacasebtn;
-
+    private WebElement openacasebtn;
     @FindBy(xpath = "//*[@id=\"root\"]/div[4]/div[2]/div/div/div[4]/a/span[1]")
-    WebElement CaptureforJIRABTN;
+    private WebElement CaptureforJIRABTN;
 
     //Provide Information about yourself
     @FindBy(xpath = "(//td/input)[1]")
     private WebElement youremail;
 
     @FindBy(xpath = "//*[@id=\"webToCasePage:w2cForm:webToCaseZephyr:webToCaseZephyrComponent:step1:webToCaseContainer:edtExtraEmails\"]")
-    WebElement ccemails;
+    private WebElement ccemails;
 
     @FindBy(xpath = "//*[@id=\"webToCasePage:w2cForm:webToCaseZephyr:webToCaseZephyrComponent:step1:webToCaseContainer:edtFullName\"]")
-    WebElement YourFullName;
+    private WebElement YourFullName;
     //Enter description of the issue
     @FindBy(xpath = "//*[@id=\"webToCasePage:w2cForm:webToCaseZephyr:webToCaseZephyrComponent:step3:webToCaseContainer:edtSubject\"]")
-    WebElement Subjectfield;
+    private WebElement Subjectfield;
     // work on problem description element
     @FindBy(xpath = "//*[@id=\"webToCasePage:w2cForm:webToCaseZephyr:webToCaseZephyrComponent:save\"]")
-    WebElement Submitnofilestouploadbtn;
-
-
+    private WebElement Submitnofilestouploadbtn;
     public SupportPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
     //Reusable steps
-    public void clickANDTYPEONSearchfield(){
+    public void TypeandEnterONSearchfield(){
         click(Searchfield);
         typeAndEnter(Searchfield,"AlertSite");
     }
@@ -60,19 +54,15 @@ public class SupportPage extends CommonAPI {
         click(CaptureforJIRABTN);
     }
     public void clickANDTYPEONYOUREMAIL(){
-       // click(youremail);
         type(youremail,"jeffbezos@gmail.com");
     }
     public void clickANDTYPEONCCEMAIL(){
-        click(ccemails);
         type(ccemails,"jeffbezos@gmail.com");
     }
     public void clickANDTYPEONYOURFULLNAME(){
-        click(YourFullName);
         type(YourFullName,"Jeff Bezos");
     }
     public void clickANDTYPEONSUBJECTFIELD(){
-        click(Subjectfield);
         type(Subjectfield,"Help");
     }
     public void clickONSubmitnofilestouploadbtn() {

@@ -1,36 +1,28 @@
 package pages.Faizan;
-
 import base.CommonAPI;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 public class AlertsitePage extends CommonAPI {
-    @FindBy(css = "//input[@placeholder='email']")
-    WebElement AlertsiteEmail;
-
-    @FindBy(css = "//*[@id=\"id_password\"]")
-    WebElement Alertpassword;
-
-    @FindBy(css = "//*[@id=\"signin-form\"]/div[3]/input")
-    WebElement SignInbtn;
-
+    @FindBy(xpath = "//a[contains(text(),'Forgot Password?')]")
+    private WebElement forgotPASSWORDBTN;
+    @FindBy(xpath = "//input[@id='id_email']")
+    private WebElement resetPASSWORDBAR;
+    @FindBy(xpath = "//body/div[1]/div[1]/div[2]/div[1]/form[1]/div[3]/input[1]")
+    private WebElement submitBTN;
     public AlertsitePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
     //Reusable steps
-    public void clickANDTYPEONEMAIL(){
-        click(AlertsiteEmail);
-        type(AlertsiteEmail,"ElonMusk@gmail.com");
+    public void clickonforgotPASSWORDBTN() {
+        click(forgotPASSWORDBTN);
     }
-    public void clickANDTYPEONpassword(){
-        click(Alertpassword);
-        type(Alertpassword,"ElonMusk123");
+    public void typeOnresetPASSWORDBAR() {
+        type(resetPASSWORDBAR,"pnt123@gmail.com");
     }
-    public void clickONSigninbtn() {
-        click(SignInbtn);
+    public void clickONSUBMITBTN() {
+        click(submitBTN);
     }
-
-    }
+}
 

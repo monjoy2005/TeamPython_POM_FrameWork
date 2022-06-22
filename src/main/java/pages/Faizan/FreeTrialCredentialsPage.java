@@ -8,26 +8,21 @@ import org.openqa.selenium.support.PageFactory;
 
 public class FreeTrialCredentialsPage extends CommonAPI {
     @FindBy(css = "a[class='btn btn-independent btn-nav form-modal-show']")
-    WebElement Freetrialbtn;
-
+    private WebElement Freetrialbtn;
     @FindBy(css = "#Email")
-    WebElement Workemail;
-
+    private WebElement Workemail;
     @FindBy(css = "#FirstName")
-    WebElement Firstname;
-
+    private WebElement Firstname;
     @FindBy(css = "#LastName")
-    WebElement Lastname;
-
+    private WebElement Lastname;
     @FindBy(css = "#Company")
-    WebElement Company;
-
+    private WebElement Company;
     @FindBy(css = "#Phone")
-    WebElement PhoneNumber;
-
+    private WebElement PhoneNumber;
     @FindBy(css = "#mktoForm_5555 > div.mktoButtonRow > span > button")
-    WebElement StartTrialbtn;
-
+    private WebElement StartTrialbtn;
+    @FindBy(css = "#Email")
+    private WebElement invalidWORKEMAIL;
     public FreeTrialCredentialsPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
@@ -56,5 +51,8 @@ public class FreeTrialCredentialsPage extends CommonAPI {
     }
     public void clickONSTARTTRIALBTN(){
         click(StartTrialbtn);
+    }
+    public void typeONinvalidWORKEMAIL(){
+        type(invalidWORKEMAIL,"ElonMusk@");
     }
 }

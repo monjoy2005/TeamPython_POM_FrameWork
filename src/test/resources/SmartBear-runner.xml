@@ -6,17 +6,17 @@
     <parameter name="browser" value="chrome"></parameter>
     <parameter name="os" value="windows"></parameter>
 
-    <test name="CartTest">
-        <classes>
-            <class name="Application.SmartBear.ShoppingCartTest"></class>
-        </classes>
-    </test>
-
-<!--    <test name="LoginTest">-->
+<!--    <test name="CartTest">-->
 <!--        <classes>-->
-<!--            <class name="Application.SmartBear.LoginTest"></class>-->
+<!--            <class name="Application.SmartBear.ShoppingCartTest"></class>-->
 <!--        </classes>-->
 <!--    </test>-->
+
+    <test name="LoginTest">
+        <classes>
+            <class name="Application.SmartBear.LoginTest"></class>
+        </classes>
+    </test>
 
 </suite>
 

@@ -1,48 +1,42 @@
 package pages.Faizan;
-
 import base.CommonAPI;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 public class CredentialsPage extends CommonAPI {
     //Address Information
     @FindBy(css = "#cbiID0ECARBCFBFBOA")
     private WebElement Companyname;
-
     @FindBy(css = "#cbiID0ECAPBCFBFBOA")
     private WebElement Firstname;
-
     @FindBy(css = "#cbiID0ECAOBCFBFBOA")
     private WebElement Lastname;
-
     @FindBy(css = "#cbiID0ECALBCFBFBOA")
     private WebElement Streetaddress;
-
     @FindBy(css = "#cbiID0ECAJBCFBFBOA")
     private WebElement City;
-
     @FindBy(css = "#cbiID0ECAHBCFBFBOA")
     private WebElement Zipcode;
-
     @FindBy(css = "#cbiID0EDAEBCFBFBOA")
     private WebElement phoneNUMBER;
-
     @FindBy(css = "#cbiID0ECAABBBCFBFBOA")
     private WebElement Email;
     //Payment options
     @FindBy(css = "#cbiID0ECABAAAWDABBFBOA")
     private WebElement cardHOLDERNAME;
-
     @FindBy(css = "#cbiID0ECABCAAWDABBFBOA")
     private WebElement Cardnumber;
-
     @FindBy(css = "#cbiID0ECABBAAWDABBFBOA")
     private WebElement CVVcode;
-
     @FindBy(css = "#cleverSubmitPurchase > span > span > span > span > span > input")
     private WebElement BuyNowbtn;
+
+    @FindBy(xpath = "//*[@id=\"cleverGlobalizer\"]")
+    WebElement Languagebtn;
+
+    @FindBy(xpath = "//*[@id=\"cbiID0EABAACMBOA\"]/option[3]")
+    WebElement SpanishOption;
     public CredentialsPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
@@ -95,15 +89,13 @@ public class CredentialsPage extends CommonAPI {
         click(BuyNowbtn);
     }
 
+    public void clickonLanguagebtn(){
+        click(Languagebtn);
+    }
 
-
-
-
-
-
-
-
-
+    public void clickonSpanishOption(){
+        click(SpanishOption);
+    }
 
 
 }

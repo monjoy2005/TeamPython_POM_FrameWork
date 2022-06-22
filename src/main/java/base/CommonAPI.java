@@ -215,9 +215,9 @@ public class CommonAPI {
         actions.dragAndDrop(draggable, droppable).build().perform();
     }
 
-    public void clickWithActions(WebDriver driver, WebElement element){
+    public void clickWithActions(WebDriver driver, String element){
         Actions actions = new Actions(driver);
-        actions.click(element).build().perform();
+        actions.click().build().perform();
     }
 
     public void rightClick(WebDriver driver, WebElement element){
@@ -229,7 +229,6 @@ public class CommonAPI {
         Actions actions = new Actions(driver);
         actions.clickAndHold(element).build().perform();
     }
-
     public boolean isPresent(WebElement element){
         return element.isDisplayed();
     }
@@ -251,6 +250,15 @@ public class CommonAPI {
         JavascriptExecutor js = (JavascriptExecutor)driver;
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
+    //Faizan
+    public void handleFrame(){
+        getDriver().switchTo().frame(0);
+    }
+    public void pageDown(){
+        Actions actions = new Actions(driver);
+        actions.sendKeys(Keys.PAGE_DOWN).build().perform();
+    }
+
 
     public void waitFor(int seconds) {
         try {
